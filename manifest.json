@@ -1,0 +1,15 @@
+{
+  "name": "Clien NeXT Extension",
+  "version": "1.1",
+  "description": "Clien NeXT Extension",
+  "permissions": [
+    "http://clien.career.co.kr/"
+  ],
+  "content_scripts": [
+    {
+      "matches": ["http://clien.career.co.kr/*"],
+      "css": ["end-chrome.css"],
+      "js": ["jquery-1.4.2.min.js", "end.js"]
+    }
+  ]
+}

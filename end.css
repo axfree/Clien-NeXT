@@ -1,0 +1,23 @@
+
+.cl-thumb-up {
+	width: 26px;
+	height: 20px;
+	background: no-repeat 6px 0 url(cn-up.png);
+	cursor: pointer;
+}
+
+.cl-thumb-down {
+	width: 20px;
+	height: 20px;
+	background: no-repeat url(cn-down.png);
+	cursor: pointer;
+}
+
+.cl-comment {
+	
+}
+
+.cl-reply {
+	padding-left: 20px !important;
+	background: no-repeat 0 2px url(cn-re.png);
+}
