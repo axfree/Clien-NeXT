@@ -87,17 +87,20 @@ function modifyBoard(e) {
 		// 	$(cont).css("background-color", "#666666");
 
 		if (true) {
-			var liUp = document.createElement("LI");
 			var liDn = document.createElement("LI");
-			$(liUp).addClass("cl-thumb-up");
+			var liSc = document.createElement("LI");
+			var liUp = document.createElement("LI");
 			$(liDn).addClass("cl-thumb-down");
-			//$(liUp).attr("uname", uname);
+			$(liUp).addClass("cl-thumb-up");
+			$(liSc).addClass("cl-score");
 			//$(liDn).attr("uname", uname);
-			$(liUp).click(function() { scoreUp($(this).parent().parent().parent().attr("u-name")) });
+			//$(liUp).attr("uname", uname);
 			$(liDn).click(function() { scoreDown($(this).parent().parent().parent().attr("u-name")) });
+			$(liUp).click(function() { scoreUp($(this).parent().parent().parent().attr("u-name")) });
 
-			$(head).find(".reply_btn").append(liUp);
-			$(head).find(".reply_btn").append(liDn);
+			$(head).find(".reply_btn").append(liDn)
+			  						  .append(liSc)
+									  .append(liUp);
 		}
 
 		//console.log("*" + uname + "*");
@@ -130,14 +133,14 @@ function scoreApply(div, score, animate) {
 	$(div).find(".reply_content:first").css("opacity", (score + 5) / 5.0);
 	
 	if (score == -5) {
-		$(div).find(".reply_head:first").css("text-decoration", "line-through");
+		$(div).find(".reply_head:first .reply_info").css("text-decoration", "line-through");
 		if (animate)
 			$(div).find(".reply_content:first").animate({"height":"toggle"}, 500);
 		else
 			$(div).find(".reply_content:first").hide();
 	}
 	else {
-		$(div).find(".reply_head:first").css("text-decoration", "none");
+		$(div).find(".reply_head:first .reply_info").css("text-decoration", "none");
 		if (!$(div).find(".reply_content:first").is(":visible")) {
 			if (animate)
 				$(div).find(".reply_content:first").animate({"height":"toggle"}, 500);
@@ -145,6 +148,7 @@ function scoreApply(div, score, animate) {
 				$(div).find(".reply_content:first").show();
 		}
 	}
+	$(div).find(".cl-score:first").text(score > 0 ? ("+" + score) : score == 0 ? "-" : score);
 }
 
 function scoreUp(uname)
