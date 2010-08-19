@@ -11,9 +11,9 @@
 	<key>CFBundleInfoDictionaryVersion</key>
 	<string>6.0</string>
 	<key>CFBundleShortVersionString</key>
-	<string>1.2</string>
+	<string>1.2.1</string>
 	<key>CFBundleVersion</key>
-	<string>1</string>
+	<string>1.2.1</string>
 	<key>Chrome</key>
 	<dict>
 		<key>Global Page</key>
@@ -52,8 +52,8 @@
 		</dict>
 	</dict>
 	<key>Update Manifest URL</key>
-	<string>http://tv.axfree.net/clien-next/UpdateManifest.plist</string>
+	<string>http://www.axfree.net/clien-next/UpdateManifest.plist</string>
 	<key>Website</key>
-	<string>http://tv.axfree.net/clien-next</string>
+	<string>http://www.axfree.net/clien-next</string>
 </dict>
 </plist>

@@ -1,7 +1,10 @@
 {
   "name": "Clien NeXT Extension",
-  "version": "1.2",
+  "version": "1.2.1",
   "description": "Clien NeXT Extension",
+  "browser_action": {
+    "default_icon": "Icon.png"
+  },
   "permissions": [
     "http://clien.career.co.kr/"
   ],
